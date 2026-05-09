@@ -28,7 +28,7 @@ enum TokenId
     t_RETORNA = 22,
     t_OP_MAIOR_IGUAL = 23,
     t_OP_MENOR_IGUAL = 24,
-    t_OP_IGUAL = 25,
+    t_OP_IGUAL_IGUAL = 25,
     t_OP_DIFERENTE = 26,
     t_OP_MAIOR = 27,
     t_OP_MENOR = 28,
@@ -37,32 +37,33 @@ enum TokenId
     t_OP_MULT = 31,
     t_OP_DIV = 32,
     t_OP_MOD = 33,
-    t_OP_AND = 34,
-    t_OP_OR = 35,
-    t_OP_NOT = 36,
-    t_BIT_SHIFT_R = 37,
-    t_BIT_SHIFT_L = 38,
-    t_BIT_AND = 39,
-    t_BIT_OR = 40,
-    t_BIT_NOT = 41,
-    t_BIT_XOR = 42,
-    t_DELIM_ESQ_PAREN = 43,
-    t_DELIM_DIR_PAREN = 44,
-    t_DELIM_ESQ_COLC = 45,
-    t_DELIM_DIR_COLC = 46,
-    t_DELIM_ESQ_CHAVE = 47,
-    t_DELIM_DIR_CHAVE = 48,
-    t_PONT_PONTO_VIRGULA = 49,
-    t_PONT_VIRGULA = 50,
-    t_PONT_PONTO = 51,
-    t_PONT_DOIS_PONTOS = 52,
-    t_INT_LITERAL = 53,
-    t_REAL_LITERAL = 54,
-    t_BIN_LITERAL = 55,
-    t_HEX_LITERAL = 56,
-    t_CHAR_LITERAL = 57,
-    t_STRING_LITERAL = 58,
-    t_IDENTIFICADOR = 59
+    t_OP_IGUAL = 34,
+    t_OP_AND = 35,
+    t_OP_OR = 36,
+    t_OP_NOT = 37,
+    t_BIT_SHIFT_R = 38,
+    t_BIT_SHIFT_L = 39,
+    t_BIT_AND = 40,
+    t_BIT_OR = 41,
+    t_BIT_NOT = 42,
+    t_BIT_XOR = 43,
+    t_DELIM_ESQ_PAREN = 44,
+    t_DELIM_DIR_PAREN = 45,
+    t_DELIM_ESQ_COLC = 46,
+    t_DELIM_DIR_COLC = 47,
+    t_DELIM_ESQ_CHAVE = 48,
+    t_DELIM_DIR_CHAVE = 49,
+    t_PONT_PONTO_VIRGULA = 50,
+    t_PONT_VIRGULA = 51,
+    t_PONT_PONTO = 52,
+    t_PONT_DOIS_PONTOS = 53,
+    t_INT_LITERAL = 54,
+    t_REAL_LITERAL = 55,
+    t_BIN_LITERAL = 56,
+    t_HEX_LITERAL = 57,
+    t_CHAR_LITERAL = 58,
+    t_STRING_LITERAL = 59,
+    t_IDENTIFICADOR = 60
 };
 
 const int STATES_COUNT = 156;
@@ -82,10 +83,10 @@ const int ACCEPT = 3;
 const int GO_TO  = 4;
 const int ERROR  = 5;
 
-extern const int PARSER_TABLE[263][117][2];
+extern const int PARSER_TABLE[293][144][2];
 
-extern const int PRODUCTIONS[135][2];
+extern const int PRODUCTIONS[126][2];
 
-extern const char *PARSER_ERROR[263];
+extern const char *PARSER_ERROR[293];
 
 #endif

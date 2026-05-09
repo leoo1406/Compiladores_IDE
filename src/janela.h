@@ -16,6 +16,11 @@
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QSplitter>
+#include <QTableWidget>
+#include <QTabWidget>
+#include <QHeaderView>
+
+class Semantico;
 
 class Janela : public QMainWindow
 {
@@ -35,19 +40,19 @@ private slots:
     void atualizarLinhaColuna();
 
 private:
-    // Widgets
     QPlainTextEdit *editor;
     QTextEdit *saidaMensagens;
+    QTableWidget *tabelaSimbolosWidget;
+    QTabWidget *tabWidget;
     QPushButton *botaoCompilar;
     QLabel *labelStatus;
-
-    // Arquivo atual
     QString arquivoAtual;
     bool modificado;
 
     void criarMenus();
     void criarInterface();
     void configurarEditor();
+    void atualizarTabelaSimbolos(const Semantico &semantico);
 };
 
-#endif // JANELA_H
+#endif

@@ -7,7 +7,6 @@ TEMPLATE = app
 
 CONFIG += c++17
 
-# Organizar arquivos gerados em pastas separadas
 OBJECTS_DIR = build/obj
 MOC_DIR = build/moc
 RCC_DIR = build/rcc
@@ -20,6 +19,7 @@ SOURCES += \
     src/Lexico.cpp \
     src/Sintatico.cpp \
     src/Semantico.cpp \
+    src/SemanticTable.cpp \
     src/Constants.cpp
 
 HEADERS += \
@@ -32,6 +32,9 @@ HEADERS += \
     src/AnalysisError.h \
     src/LexicalError.h \
     src/SyntacticError.h \
-    src/SemanticError.h
+    src/SemanticError.h \
+    src/Symbol.h \
+    src/SymbolTable.h \
+    src/SemanticTable.h
 
 INCLUDEPATH += src
